@@ -1,0 +1,15 @@
+{
+  "dependencies": [],
+  "content_type": "UNKNOWN",
+  "title": "timer-panel",
+  "manufacturer": "FAFG_Ogier",
+  "creator": "FAFG_Ogier",
+  "package_version": "2.0.0",
+  "minimum_game_version": "1.39.12",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<svg id="Titre" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 64.000000 64.000000">
+    <title>ICON_TOOLBAR_TIMER_PANEL</title>
+    <g id="HIGHLIGHT">
+        <circle cx="32" cy="32" r="31" fill="#b3b3b3" stroke="#FFFFFF" stroke-width="1"/>
+        <g fill="none" stroke="#544c1d" stroke-linecap="round">
+            <path stroke-width="3" d="M32 11 V15"/>
+            <path stroke-width="3" d="M27 10 H37"/>
+            <path stroke-width="2.4" d="M47 19 L50 16"/>
+            <circle cx="32" cy="37" r="21" stroke-width="2.6"/>
+            <path stroke-width="2.4" d="M32.00 18.50 L32.00 23.00"/>
+            <path stroke-width="1.8" d="M41.25 20.98 L39.75 23.58"/>
+            <path stroke-width="1.8" d="M48.02 27.75 L45.42 29.25"/>
+            <path stroke-width="2.4" d="M50.50 37.00 L46.00 37.00"/>
+            <path stroke-width="1.8" d="M48.02 46.25 L45.42 44.75"/>
+            <path stroke-width="1.8" d="M41.25 53.02 L39.75 50.42"/>
+            <path stroke-width="2.4" d="M32.00 55.50 L32.00 51.00"/>
+            <path stroke-width="1.8" d="M22.75 53.02 L24.25 50.42"/>
+            <path stroke-width="1.8" d="M15.98 46.25 L18.58 44.75"/>
+            <path stroke-width="2.4" d="M13.50 37.00 L18.00 37.00"/>
+            <path stroke-width="1.8" d="M15.98 27.75 L18.58 29.25"/>
+            <path stroke-width="1.8" d="M22.75 20.98 L24.25 23.58"/>
+            <path stroke-width="2.6" d="M32 37 L40 28"/>
+        </g>
+        <circle cx="32" cy="37" r="2.6" fill="#544c1d"/>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SimBase.Document Type="InGamePanels" version="1,0">
+  <Filename>InGamePanel_Timer.spb</Filename>
+  <InGamePanels.InGamePanelDefinition id="PANEL_TIMER" Name="Timer" 
+    url="html_UI/ingamePanels/TimerPanel/TimerPanel.html" 
+    resizeDirections="Both" minWidth="14" minHeight="9" defaultWidth="22" defaultHeight="15" defaultTop="33" defaultRight="2" icon="ICON_TOOLBAR_TIMER_PANEL" buttonVisible="true">
+  </InGamePanels.InGamePanelDefinition>
+</SimBase.Document>

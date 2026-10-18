@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" Name="timer-panel" FolderName="Packages" PublishingGroupFolderName="PublishingGroupsContent" MetadataFolderName="PackagesMetadata" PublishingGroupMetadataFolderName="PublishingGroupsMetadata">
+	<OutputDirectory>.</OutputDirectory>
+	<TemporaryOutputDirectory>_Temp</TemporaryOutputDirectory>
+	<PublishingGroupTemporaryOutputDirectory>_PublishingGroupInt</PublishingGroupTemporaryOutputDirectory>
+	<Packages>
+		<Package>PackageDefinitions\timer-panel.xml</Package>
+	</Packages>
+	<PublishingGroups/>
+</Project>
+

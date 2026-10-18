@@ -1,0 +1,180 @@
+/* Timer: a 1970s LED chronograph. Sizes are generous on purpose: the panel is used with a mouse in VR. */
+.tm-root {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    background: #121110;
+    color: #cfc8bd;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+}
+
+.tm-root * { box-sizing: border-box; }
+
+/* Black anodised case with a bevelled edge. */
+.tm-case {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px 10px;
+    border: 2px solid #3d3933;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #2b2825 0%, #1a1816 55%, #131211 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -2px 4px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ---- Header ---- */
+
+.tm-head {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.tm-ann { display: flex; align-items: center; }
+.tm-ann-item {
+    margin-right: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-shadow: 0 0 6px currentColor;
+}
+.tm-switches { display: flex; align-items: center; }
+
+.tm-chip {
+    min-width: 40px;
+    min-height: 30px;
+    margin: 2px;
+    padding: 2px 10px;
+    border: 1px solid #55504a;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #46423d, #2c2a27);
+    color: #d9d2c6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+.tm-chip:hover { background: linear-gradient(180deg, #57524c, #38352f); }
+.tm-chip:active { background: #1f1d1b; }
+
+/* ---- Glass and display ---- */
+
+.tm-glass {
+    position: relative;
+    flex: 3 1 80px;
+    min-height: 40px;
+    margin-bottom: 8px;
+    border: 3px solid #050505;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #4a453e, inset 0 4px 12px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+
+.tm-svg {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    width: calc(100% - 20px);
+    height: calc(100% - 16px);
+}
+
+.tm-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(172deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0) 55%);
+}
+
+.tm-seg { stroke: none; }
+.tm-seg.on { stroke-width: 3; stroke-linejoin: round; paint-order: stroke; }
+
+/* ---- Countdown presets ---- */
+
+.tm-presets {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+/* ---- Keys ---- */
+
+.tm-keys { display: flex; flex: 0 0 auto; }
+
+.tm-key {
+    flex: 1 1 0;
+    min-height: 48px;
+    margin: 0 4px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #4a4742 0%, #2a2825 50%, #1e1c1a 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 3px 0 #0a0a09, 0 4px 6px rgba(0, 0, 0, 0.6);
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.tm-key:hover { background: linear-gradient(180deg, #57534d 0%, #34312d 50%, #25231f 100%); }
+.tm-key:active { transform: translateY(2px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 #0a0a09; }
+.tm-go { color: #7fe08a; }
+.tm-go.tm-stop { color: #ff8a7a; }
+.tm-lap { color: #ffcf6b; }
+.tm-key.tm-off { color: #6d675f; cursor: default; }
+
+/* ---- Lap list ---- */
+
+.tm-laps {
+    flex: 1 1 60px;
+    min-height: 0;
+    margin-top: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #0b0907;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+}
+.tm-lap-row { display: flex; justify-content: space-between; line-height: 1.5; }
+.tm-lap-no { flex: 0 0 2.5em; opacity: 0.7; }
+.tm-lap-split { flex: 1 1 auto; font-weight: bold; }
+.tm-lap-total { flex: 0 0 auto; opacity: 0.7; }
+
+/* ---- Small panels ---- */
+
+.tm-nolaps .tm-laps { display: none !important; }
+.tm-nohead .tm-head { display: none; }
+.tm-narrow .tm-ann-item { margin-right: 6px; font-size: 12px; }
+.tm-narrow .tm-key { font-size: 14px; letter-spacing: 0.08em; }
+
+/* ---- LED colours ---- */
+
+.tm-theme-amber .tm-glass { background: radial-gradient(ellipse at 50% 35%, #231304 0%, #0b0602 75%); }
+.tm-theme-amber .tm-seg { fill: rgba(255, 170, 20, 0.09); }
+.tm-theme-amber .tm-seg.on { fill: #ffb21c; stroke: rgba(255, 150, 0, 0.35); }
+.tm-theme-amber .tm-ann-item, .tm-theme-amber .tm-laps { color: #ffb21c; }
+
+.tm-theme-red .tm-glass { background: radial-gradient(ellipse at 50% 35%, #2a0806 0%, #0c0202 75%); }
+.tm-theme-red .tm-seg { fill: rgba(255, 50, 30, 0.09); }
+.tm-theme-red .tm-seg.on { fill: #ff4030; stroke: rgba(255, 30, 10, 0.35); }
+.tm-theme-red .tm-ann-item, .tm-theme-red .tm-laps { color: #ff5a48; }
+
+.tm-theme-green .tm-glass { background: radial-gradient(ellipse at 50% 35%, #06200c 0%, #020a04 75%); }
+.tm-theme-green .tm-seg { fill: rgba(80, 255, 110, 0.09); }
+.tm-theme-green .tm-seg.on { fill: #5cff7c; stroke: rgba(40, 255, 80, 0.35); }
+.tm-theme-green .tm-ann-item, .tm-theme-green .tm-laps { color: #5cff7c; }
